@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Tables from "./Table";
 import axios from "axios";
 import { Box, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -46,7 +46,11 @@ const Home = () => {
         </Button>
       </div>
       <Box>
-        <Tables data={userData} onDelete={handleDelete} />
+        <Tables
+          data={userData}
+          onClick={() => Navigate(`/edituser/${user.id}`)}
+          onDelete={handleDelete}
+        />
       </Box>
     </div>
   );

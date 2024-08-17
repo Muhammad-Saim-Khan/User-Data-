@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -9,6 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
 import EditIcon from "@mui/icons-material/Edit";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -27,12 +28,14 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 export default function Tables({ data, onDelete }) {
+  const navigate = useNavigate();
+
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       axios
         .delete(`http://localhost:3000/usersArr/${id}`)
         .then(() => {
-          onDelete(id); // Update the parent component's state after deletion
+          onDelete(id);
         })
         .catch((err) => console.error(err));
     }
@@ -43,6 +46,7 @@ export default function Tables({ data, onDelete }) {
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow sx={{ bgcolor: "transparent" }}>
+            <StyledTableCell sx={{ fontWeight: "bold" }}>Id</StyledTableCell>
             <StyledTableCell sx={{ fontWeight: "bold" }}>Name</StyledTableCell>
             <StyledTableCell sx={{ fontWeight: "bold" }} align="left">
               Username
@@ -61,6 +65,13 @@ export default function Tables({ data, onDelete }) {
         <TableBody sx={{ bgcolor: "black" }}>
           {data.map((e) => (
             <StyledTableRow sx={{ bgcolor: "#1A1A1A" }} key={e.id}>
+              <StyledTableCell
+                sx={{ color: "white" }}
+                component="th"
+                scope="row"
+              >
+                {e.id}
+              </StyledTableCell>
               <StyledTableCell
                 sx={{ color: "white" }}
                 component="th"
@@ -92,6 +103,7 @@ export default function Tables({ data, onDelete }) {
                     color: "blue",
                     cursor: "pointer",
                   }}
+                  onClick={() => navigate(`edituser/${e.id}`)} // Correctly pass e.id to navigate
                 />
               </StyledTableCell>
             </StyledTableRow>
