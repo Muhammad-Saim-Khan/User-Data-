@@ -2,15 +2,31 @@
   "usersArr": [
     {
       "id": 1,
-      "name": "Mrs. Dennis Schulist",
-      "username": "Leopoldo_Corkery update",
-      "email": "Karley_Dach@jasper.info",
-      "phone": "1-477-935-8478 x6430",
-      "website": "ola.org"
+      "name": "Muhammad Saim Khan",
+      "username": "Saimkhan9925",
+      "email": "khanmsaim89@gmail.com",
+      "phone": "586.493.6943 x140",
+      "website": "jacynthe.com"
+    },
+    {
+      "id": 2,
+      "name": "Tony Stark",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "phone": "586.493.6943 x140",
+      "website": "jacynthe.com"
+    },
+    {
+      "id": 3,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "phone": "586.493.6943 x140",
+      "website": "jacynthe.com"
     },
     {
       "id": 4,
-      "name": "Glenna Reichert ashan",
+      "name": "Glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
       "phone": "(775)976-6794 x41206",
@@ -23,13 +39,6 @@
       "email": "Rey.Padberg@karina.biz",
       "phone": "024-648-3804",
       "website": "ambrose.net"
-    },
-    {
-      "name": "Muhammad Faraz",
-      "username": "mFaraz2001",
-      "email": "faraz786@gmail.com",
-      "phone": "0309-1231718",
-      "id": 6
     },
     {
       "name": "John Smith",
@@ -67,11 +76,32 @@
       "id": 11
     },
     {
-      "name": "M Saim Khan",
-      "username": "saimkhan9925",
-      "email": "khanmsaim89@gmail.com",
-      "phone": "1029323843",
-      "id": 12
+      "name": "Muhammad Faraz",
+      "email": "faraz@gmail.com",
+      "username": "M-faraz",
+      "phone": "4g56456456",
+      "id": 18
+    },
+    {
+      "name": "shahid yousuf",
+      "email": "shahid@gmail.com",
+      "username": "shahid_yousef420",
+      "phone": "511361",
+      "id": 19
+    },
+    {
+      "name": "Mr.Abc",
+      "email": "abc@gmail.com",
+      "username": "mr_abc",
+      "phone": "123-456-789",
+      "id": 20
+    },
+    {
+      "name": "Ahsan Ahmed",
+      "email": "ahsan@gmail.com",
+      "username": "ahsan_ahmed",
+      "phone": "123-456-789",
+      "id": 21
     }
   ]
 }
